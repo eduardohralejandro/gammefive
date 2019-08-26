@@ -1,0 +1,16 @@
+.brand-navbar {
+	display: flex;
+	background-color: rgb(80, 236, 140);
+	width: 100%;
+	height: 6rem;
+	img {
+		height: 5rem;
+		width: 5rem;
+		margin-left: 2rem;
+		padding-top: 1rem;
+		padding-bottom: 3rem;
+	}
+	.router-links {
+		text-decoration: none;
+	}
+}
