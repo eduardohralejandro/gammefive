@@ -9,7 +9,7 @@ npm run dev
 
 This application will allow you to train your brain through games.
 
-These will be a series of games in one web-app, there will be more updates in the next two weeks
+These will be a series of games in one web-app, there will be more updates to come.
 
 You can visit the live version of the first prototype here ----> https://gammefive.herokuapp.com
 
