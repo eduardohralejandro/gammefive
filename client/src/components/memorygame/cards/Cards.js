@@ -16,7 +16,7 @@ class Cards extends React.Component {
       "http://k007.kiwi6.com/hotlink/5ghn3km537/Monkeys_Are_Coming.mp3";
 
     const stream = new Audio(url);
-    // stream.play();
+    stream.play();
   }
   shuffel = async type => {
     const getRandomValue = arrayValue => {
