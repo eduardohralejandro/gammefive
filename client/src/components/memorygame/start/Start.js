@@ -10,7 +10,6 @@ const Start = () => {
   return (
     <div>
       <Cards stateStart={start} start={startGame} />
-      {/* <p className="volume-up">volume up</p> */}
     </div>
   );
 };

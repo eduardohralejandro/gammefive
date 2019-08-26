@@ -12,6 +12,7 @@ class Cards extends React.Component {
     disableBtn: false
   };
   async componentDidMount() {
+    //when component mounts we load an audio file 
     const url = "http://k007.kiwi6.com/hotlink/n27i2vh6on/Monkeys_Are_Coming.mp3";
 
     const stream = new Audio(url);
@@ -28,10 +29,10 @@ class Cards extends React.Component {
     if (type === "hard") {
       //we set again the state to the initial one
       await this.setState({ urlSource: [...letters] });
-      //we get a random value
+      //we get a random value & we sent a random value to our state
       await this.setState({ urlSource: getRandomValue(letters) });
     }
-
+    //splice the letters array according to the level of the game
     if (type === "medium") {
       this.setState({ urlSource: [...letters] });
       let mediumType = letters.splice(0, 12);
@@ -55,7 +56,7 @@ class Cards extends React.Component {
     await this.setState(prevState => ({
       lettersArray: [...prevState.lettersArray, element]
     }));
-    console.log(this.state.lettersArray);
+
     const checkDuplicateValues = letter => {
       let compare = new Set(letter).size !== letter.length;
 

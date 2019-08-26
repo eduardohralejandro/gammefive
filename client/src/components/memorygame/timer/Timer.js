@@ -71,7 +71,7 @@ class Timer extends React.Component {
         {showPanel ? (
           urlSource.length === 0 ? (
             <Fragment>
-              <p>Wow congrats, you won</p>
+              <p className="congrats-message">Wow congrats, you won</p>
               <End />
             </Fragment>
           ) : (
