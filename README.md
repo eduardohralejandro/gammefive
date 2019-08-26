@@ -5,7 +5,7 @@ game application - brain games
 npm run dev
 
 
-#info
+# Info
 
 This application will allow you to train your brain through games.
 
@@ -13,9 +13,10 @@ These will be a series of games in one web-app, there will be more updates in th
 
 You can visit the live version of the first prototype here ----> https://gammefive.herokuapp.com
 
-#Author
+# Author
+
 Eduardo Hernandez
 
-#license 
+# License
 
 MIT license
