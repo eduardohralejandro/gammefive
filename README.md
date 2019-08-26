@@ -13,7 +13,7 @@ These will be a series of games in one web-app, there will be more updates in th
 
 You can visit the live version of the first prototype here ----> https://gammefive.herokuapp.com
 
-#Autor
+#Author
 Eduardo Hernandez
 
 #license 
