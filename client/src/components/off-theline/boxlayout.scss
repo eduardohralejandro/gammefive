@@ -1,9 +1,103 @@
 body {
-	background-color: cornflowerblue;
+	background-color: black;
 }
+
 .level-lines {
-	border: solid 3px white;
-	margin-top: 25rem;
-	padding: 5rem;
+	// margin-top: 25rem;
+	// width: 55%;
+	// margin-left: 128px;
+	// padding: 5rem;
 	display: flex;
+	flex-direction: row;
+}
+#ufoParentDiv {
+	// columns: 2 auto;
+
+	display: flex;
+	flex-direction: row;
+	// position: absolute;
+	// margin: 24px;
+	// margin: 0 auto;
+	// width: 50%;
+	// margin-top: 140px;
+	-webkit-animation: 3s linear 0s infinite alternate mymove;
+	animation: 3s linear 0s infinite alternate mymove;
+}
+
+.ufo-crafts {
+	columns: 2;
+}
+
+.parentUfoDiv {
+	columns: 2;
+}
+
+.ufocraft-container {
+	// columns: 2 auto;
+	columns: 2;
+}
+.laser {
+	transform: rotate(180deg);
+	position: absolute;
+	animation: movingBottomToTop 1s linear;
+	animation-direction: alternate;
+}
+
+.enemy-laser {
+	animation: 3s linear mymove2;
+	animation-direction: alternate;
+	top: 0px;
+	// position: absolute;
+}
+
+// .big-box {
+// 	display: flex;
+// 	flex-direction: row;
+// }
+
+// @-webkit-keyframes mymove {
+// 	from {
+// 		margin-left: 20%;
+// 	}
+// 	to {
+// 		margin-left: 40%;
+// 	}
+// }
+@keyframes mymove2 {
+	0% {
+		top: 0px;
+	}
+
+	100% {
+		top: 655px;
+	}
+}
+
+@keyframes mymove {
+	0% {
+		margin-left: 20px;
+	}
+
+	100% {
+		margin-left: 40px;
+	}
+}
+
+@keyframes movingBottomToTop {
+	0% {
+		top: 255px;
+	}
+
+	100% {
+		top: 0px;
+	}
+}
+
+.background {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
 }

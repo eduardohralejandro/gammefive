@@ -26,6 +26,8 @@ class Cards extends React.Component {
         .map(([_, x]) => x);
     };
 
+    
+
     if (type === "hard") {
       //we set again the state to the initial one
       await this.setState({ urlSource: [...letters] });
