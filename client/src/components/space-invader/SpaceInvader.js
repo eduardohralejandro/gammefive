@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from "react";
-import "./boxlayout.scss";
+import "./space-invader.scss";
 import { ufoSpaceShips, heroHearts } from "./spaceElements";
 import Particles from "particlesjs";
-class Boxlayout extends Component {
+class SpaceInvader extends Component {
   state = {
     shipHeroPosition: null,
     ufoPosition: 0,
@@ -489,4 +489,4 @@ class Boxlayout extends Component {
   }
 }
 
-export default Boxlayout;
+export default SpaceInvader;

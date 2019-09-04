@@ -3,7 +3,7 @@ import "./App.css";
 import Start from "./components/memorygame/start/Start";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import axios from "axios";
-import Boxlayout from "./components/off-theline/Boxlayout";
+import SpaceInvader from "./components/space-invader/SpaceInvader";
 class App extends React.Component {
   state = {
     response: ""
@@ -19,7 +19,7 @@ class App extends React.Component {
         <Router>
           <div>
             {/* <Start /> */}
-            <Route exact path="/offtheline" component={Boxlayout} />
+            <Route exact path="/spaceinvader" component={SpaceInvader} />
           </div>
         </Router>
       </div>
