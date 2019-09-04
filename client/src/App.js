@@ -10,7 +10,7 @@ class App extends React.Component {
   };
   async componentDidMount() {
     //testing 
-   const getData = await axios.get("/api").then((res) => console.log(res) )
+   await axios.get("/api").then((res) => res)
   }
 
   render() {

@@ -3,67 +3,79 @@ body {
 }
 
 .level-lines {
-	// margin-top: 25rem;
-	// width: 55%;
-	// margin-left: 128px;
-	// padding: 5rem;
 	display: flex;
 	flex-direction: row;
 }
 #ufoParentDiv {
-	// columns: 2 auto;
-
+	position: relative;
+	margin-left: 25px;
 	display: flex;
 	flex-direction: row;
-	// position: absolute;
-	// margin: 24px;
-	// margin: 0 auto;
-	// width: 50%;
-	// margin-top: 140px;
-	-webkit-animation: 3s linear 0s infinite alternate mymove;
-	animation: 3s linear 0s infinite alternate mymove;
+	-webkit-animation: 1s linear 0s infinite alternate alliens-move;
+	animation: 1s linear 0s infinite alternate alliens-move;
+}
+
+.game-over-youwin {
+	display: flex;
+	justify-content: center;
+	margin-top: 25%;
+}
+
+.play-again {
+	background-color: #2ff336;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 6px;
+	margin-left: 5%;
+	font-weight: bold;
 }
 
 .ufo-crafts {
-	columns: 2;
+	margin-left: 5rem;
+	position: relative;
+	height: 28px;
+	width: 35px;
+}
+.ufocrafts-box {
+	display: flex;
+}
+.canvas {
+	display: flex;
+	justify-content: center;
 }
 
-.parentUfoDiv {
-	columns: 2;
+.space-hero {
+	margin: 0 auto;
+	width: 50%;
 }
-
-.ufocraft-container {
-	// columns: 2 auto;
-	columns: 2;
+.hero-hearts {
+	display: flex;
+	flex-direction: row;
+	margin-left: 2%;
 }
 .laser {
 	transform: rotate(180deg);
 	position: absolute;
-	animation: movingBottomToTop 1s linear;
+	animation: movingBottomToTop 0.5s linear;
 	animation-direction: alternate;
 }
 
 .enemy-laser {
-	animation: 3s linear mymove2;
+	animation: 1s linear enemy-laser;
 	animation-direction: alternate;
 	top: 0px;
-	// position: absolute;
+	position: absolute;
+	margin-left: 25px;
+	top: -58px;
 }
 
-// .big-box {
-// 	display: flex;
-// 	flex-direction: row;
-// }
-
-// @-webkit-keyframes mymove {
-// 	from {
-// 		margin-left: 20%;
-// 	}
-// 	to {
-// 		margin-left: 40%;
-// 	}
-// }
-@keyframes mymove2 {
+@keyframes enemy-laser {
 	0% {
 		top: 0px;
 	}
@@ -73,7 +85,7 @@ body {
 	}
 }
 
-@keyframes mymove {
+@keyframes alliens-move {
 	0% {
 		margin-left: 20px;
 	}
