@@ -1,0 +1,60 @@
+$white: #fff;
+.clockBox {
+	display: flex;
+	margin-left: 2.18rem;
+	margin-top: 2.18rem;
+	position: relative;
+}
+
+.congratsMessage {
+	color: $white;
+}
+
+.noMoreTimeMsg {
+	color: $white;
+	font-size: 1.3rem;
+}
+
+.timeNumbers {
+	color: $white;
+	position: absolute;
+	margin: 3.5rem;
+	margin-top: 3.5rem;
+}
+.btnStartBox {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 5rem;
+	.btnStart {
+		background-color: #22ffa5;
+		border: solid 0.18rem rgb(31, 3, 131);
+		border-radius: 0.3rem;
+		cursor: pointer;
+		color: #680fd3;
+		font-size: 1.5rem;
+		flex-wrap: wrap;
+		padding: 1.5rem 1.5rem;
+		padding-left: 4.6rem;
+		padding-right: 4.6rem;
+		margin: 1.5rem;
+	}
+}
+.loader {
+	border: $white;
+	border-radius: 50%;
+	border-top: 16px solid #9034db;
+	height: 7.5rem;
+	position: relative;
+	width: 7.5rem;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

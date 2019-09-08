@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Cards from "../cards/Cards";
-import "./start.scss";
 
 const Start = () => {
   const [start, setStart] = useState(false);

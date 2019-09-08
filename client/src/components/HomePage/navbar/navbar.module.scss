@@ -1,0 +1,30 @@
+$white: #ffff;
+
+.brandNavbar {
+	color: $white;
+	display: flex;
+	flex-direction: row;
+	height: 6rem;
+	width: 100%;
+	z-index: 1;
+	.Links {
+		align-content: flex-end;
+		align-self: flex-end;
+		display: flex;
+		padding-left: 1rem;
+		justify-content: center;
+	}
+	.brandLogo {
+		height: 5rem;
+		margin-left: 2rem;
+		padding-top: 2rem;
+		padding-bottom: 3rem;
+		width: 13rem;
+	}
+	.routerLinks {
+		color: $white;
+		text-decoration: none;
+		margin-bottom: 0.5rem;
+		margin-left: 2rem;
+	}
+}

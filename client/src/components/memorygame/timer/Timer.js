@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import End from "../end/End";
-import "./timer.scss";
+import styles from "./timer.module.scss";
 
 class Timer extends React.Component {
   state = {
@@ -34,7 +34,7 @@ class Timer extends React.Component {
     this.setState({ time: timeLeft });
   }
 
-  componentWillUnmount() {
+  UNSAFE_componentWillUnmount() {
     clearInterval(this.state.timer);
   }
 
@@ -71,33 +71,33 @@ class Timer extends React.Component {
         {showPanel ? (
           urlSource.length === 0 ? (
             <Fragment>
-              <p className="congrats-message">Wow congrats, you won</p>
+              <p className={styles.congratsMessage}>Wow congrats, you won</p>
               <End />
             </Fragment>
           ) : (
             <span>
-              <div className="clock-box">
+              <div className={styles.clockBox}>
                 {logicGameOver ? null : (
-                  <div className={this.state.startBtn ? "loader" : null}></div>
+                  <div className={this.state.startBtn ? styles.loader : null} />
                 )}
 
                 <span
                   style={
                     logicGameOver ? { display: "none" } : { display: "block" }
                   }
-                  className="time-numbers"
+                  className={styles.timeNumbers}
                 >
                   {time.m}:{time.s}
                 </span>
               </div>
               {logicGameOver ? (
-                <p className="no-more-time-msg">
+                <p className={styles.noMoreTimeMsg}>
                   Hey no more time left, maybe try again <End />
                 </p>
               ) : null}
-              <div className="btn-start-box">
+              <div className={styles.btnStartBox}>
                 <button
-                  className="btn-start"
+                  className={styles.btnStart}
                   disabled={this.state.startBtn}
                   onClick={() => {
                     this.startTimer();

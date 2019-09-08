@@ -1,5 +1,5 @@
-import React from "react";
-import "./end.scss";
+import React, {Fragment} from "react";
+import styles from "./end.module.scss";
 class End extends React.Component {
   replayGame = () => {
     //this is for this first version, to improve for future versions
@@ -8,15 +8,15 @@ class End extends React.Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <button
-          className="btn-end"
+          className={styles.btnEnd}
           type="button"
           onClick={() => this.replayGame()}
         >
           play again
         </button>
-      </div>
+      </Fragment>
     );
   }
 }

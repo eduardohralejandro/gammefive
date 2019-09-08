@@ -1,7 +1,8 @@
 import React from "react";
 import Timer from "../timer/Timer";
 import letters from "../../../letters";
-import "./cards.scss";
+import styles from "./cards.module.scss";
+import Helmet from "react-helmet";
 
 class Cards extends React.Component {
   state = {
@@ -9,15 +10,21 @@ class Cards extends React.Component {
     lettersArray: [],
     cardFound: false,
     showPanel: false,
-    disableBtn: false
+    disableBtn: false,
+    audio: null
   };
-  async componentDidMount() {
-    //when component mounts we load an audio file 
-    const url = "http://k007.kiwi6.com/hotlink/n27i2vh6on/Monkeys_Are_Coming.mp3";
-
-    const stream = new Audio(url);
-    // stream.play();
+  componentDidMount() {
+    //when component mounts we load an audio file
+    // code for future versions
+    // const url = "http://k007.kiwi6.com/hotlink/n27i2vh6on/Monkeys_Are_Coming.mp3";
+    //  const stream = new Audio(url)
+    // setTimeout(this.setState({audio:stream.play()}), 1000)
+    //  stream.play();
+    // const url = "http://k007.kiwi6.com/hotlink/n27i2vh6on/Monkeys_Are_Coming.mp3";
+    //  const stream = new Audio(url)
+    //  this.setState({audio:stream})
   }
+
   shuffel = async type => {
     const getRandomValue = arrayValue => {
       return arrayValue
@@ -27,9 +34,9 @@ class Cards extends React.Component {
     };
 
     if (type === "hard") {
-      //we set again the state to the initial one
+      //set again the state to the initial one
       await this.setState({ urlSource: [...letters] });
-      //we get a random value & we sent a random value to our state
+      //get a random value & sent a random value to our state
       await this.setState({ urlSource: getRandomValue(letters) });
     }
     //splice the letters array according to the level of the game
@@ -93,27 +100,29 @@ class Cards extends React.Component {
 
     return (
       <div>
+        <Helmet bodyAttributes={{ style: "background-color : #19003e" }} />
+
         {!showPanel ? (
           <div>
-            <div className="start-game">
-              <div className="neon-orange">Memory</div>
-              <div className="neon-blue">Game</div>
+            <div className={styles.startGame}>
+              <div className={styles.neonOrange}>Memory</div>
+              <div className={styles.neonBlue}>Game</div>
             </div>
-            <div className="btn-levels">
+            <div className={styles.btnLevels}>
               <button
-                className="btn-choices"
+                className={styles.btnLevelChoices}
                 onClick={() => this.shuffel("easy")}
               >
                 easy
               </button>
               <button
-                className="btn-choices"
+                className={styles.btnLevelChoices}
                 onClick={() => this.shuffel("medium")}
               >
                 medium
               </button>
               <button
-                className="btn-choices"
+                className={styles.btnLevelChoices}
                 onClick={() => this.shuffel("hard")}
               >
                 hard
@@ -121,7 +130,7 @@ class Cards extends React.Component {
             </div>
           </div>
         ) : null}
-        <div className="card-box">
+        <div className={styles.cardBox}>
           {showPanel
             ? urlSource.map((element, key) => {
                 return (
@@ -132,13 +141,15 @@ class Cards extends React.Component {
                     }
                   >
                     <button
-                      className={`cards ${
-                        this.state.disableBtn === key ? "cards-effect" : null
+                      className={`${styles.cards} ${
+                        this.state.disableBtn === key
+                          ? styles.cardsEffect
+                          : null
                       }`}
                       disabled={this.state.disableBtn === key ? true : null}
                       style={
                         this.state.disableBtn === key
-                          ? { backgroundColor: "white" }
+                          ? { backgroundColor: "#ffff" }
                           : null
                       }
                       onClick={e => this.selectedItem(e, element, key)}
