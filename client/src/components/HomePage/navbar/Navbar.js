@@ -19,6 +19,11 @@ const Navbar = () => {
             Home
           </Link>
         </div>
+        <div className={styles.Links}>
+          <Link className={styles.routerLinks} to="/contact">
+            Contact
+          </Link>
+        </div>
       </nav>
     </Fragment>
   );
