@@ -5,6 +5,7 @@ import Home from "./components/HomePage/home/Home";
 import Navbar from "./components/HomePage/navbar/Navbar";
 import axios from "axios";
 import SpaceInvader from "./components/space-invader/SpaceInvader";
+import Contact from './components/contact/Contact'
 class App extends React.Component {
   state = {
     response: ""
@@ -12,7 +13,7 @@ class App extends React.Component {
 
   async componentDidMount() {
     //testing
-    await axios.get("/api").then(res => res);
+    await axios.get("/api").then(res => console.log(res));
   }
 
   render() {
@@ -20,6 +21,7 @@ class App extends React.Component {
       <div>
         <BrowserRouter>
           <Navbar />
+          <Contact />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/start" component={Start} />
