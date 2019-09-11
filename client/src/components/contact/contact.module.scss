@@ -1,0 +1,146 @@
+$bg-play-color: #22ffa5;
+$btnLetter: #680fd3;
+
+.inputs {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+.formContact {
+	background-color: white;
+	padding: 5rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	justify-content: center;
+	align-content: center;
+	margin-top: 9rem;
+	border-radius: 0.1rem;
+	h1 {
+		color: $btnLetter;
+	}
+	h3 {
+		color: $btnLetter;
+	}
+	input {
+		background: none;
+		border: none;
+		border: 0.1rem solid rgb(209, 208, 208);
+		border-radius: 0.1rem;
+		outline: none;
+		height: 2.8rem;
+		width: 15rem;
+	}
+	input::placeholder {
+		padding-left: 0.5rem;
+		padding-top: 0.5rem;
+	}
+
+	input:focus {
+		background: white;
+	}
+	textarea {
+		background: none;
+		border: none;
+		border: 0.1rem solid rgb(209, 208, 208);
+		border-radius: 0.1rem;
+		overflow: auto;
+		outline: none;
+		resize: none;
+		height: 6rem;
+		margin-top: 3rem;
+	}
+	textarea::placeholder {
+		margin-top: 1rem;
+		margin-left: 1rem;
+	}
+	textarea:focus {
+		background: white;
+	}
+
+	.btnSubmit {
+		background-color: $bg-play-color;
+		border: none;
+		border-radius: 0.2rem;
+		color: $btnLetter;
+		cursor: pointer;
+		font-size: 1rem;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		padding: 0.7rem 4.5rem;
+		margin: 0.2rem 0.3rem;
+		margin-top: 3rem;
+		margin-bottom: 0.2rem;
+	}
+	.btnSubmitError {
+		background-color: $bg-play-color;
+		border: none;
+		border-radius: 0.2rem;
+		color: $btnLetter;
+		cursor: pointer;
+		font-size: 1rem;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		padding: 0.7rem 4.5rem;
+		margin: 0.2rem 0.3rem;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 3rem;
+		margin-bottom: 0.2rem;
+		position: relative;
+		animation-name: shake;
+		animation-duration: 5s;
+		animation-timing-function: ease-in;
+		cursor: pointer;
+	}
+}
+button:focus {
+	outline: 0;
+}
+.textArea {
+	display: flex;
+	flex-direction: column;
+	p {
+		color: red;
+	}
+}
+
+input:nth-child(2) {
+	margin-left: 2rem;
+}
+
+@media only screen and (max-width: 1598px) {
+	input:nth-child(n + 1) {
+		margin-left: 1rem;
+	}
+}
+
+@keyframes shake {
+	0% {
+		left: 0;
+	}
+	1% {
+		left: -3px;
+	}
+	2% {
+		left: 5px;
+	}
+	3% {
+		left: -8px;
+	}
+	4% {
+		left: 8px;
+	}
+	5% {
+		left: -5px;
+	}
+	6% {
+		left: 3px;
+	}
+	7% {
+		left: 0;
+	}
+}

@@ -3,27 +3,17 @@ import Start from "./components/memorygame/start/Start";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/HomePage/home/Home";
 import Navbar from "./components/HomePage/navbar/Navbar";
-import axios from "axios";
 import SpaceInvader from "./components/space-invader/SpaceInvader";
 import Contact from './components/contact/Contact'
 class App extends React.Component {
-  state = {
-    response: ""
-  };
-
-  async componentDidMount() {
-    //testing
-    await axios.get("/api").then(res => console.log(res));
-  }
-
   render() {
     return (
       <div>
         <BrowserRouter>
           <Navbar />
-          <Contact />
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/contact" component={Contact}/>
             <Route exact path="/start" component={Start} />
             <Route exact path="/spaceinvader" component={SpaceInvader} />
           </Switch>
