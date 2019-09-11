@@ -11,11 +11,7 @@ router.post(
 	[
 		check('name')
 			.isLength({ max: 30, min: 2 })
-			.escape(),
-		check('email')
-			.isEmail()
-			.trim()
-			.normalizeEmail()
+			.escape()
 	],
 	async (req, res) => {
 		const errors = validationResult(req);
